@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f97c899f8cb9fa4c95fce1dede944f1, type: 3}
+  m_Name: QuestionsSet1
+  m_EditorClassIdentifier: 
+  QuestionsList:
+  - Text: Trouve un chien
+    Answer: Chien
+    ImageTarget: {fileID: 4388558172747564434, guid: f6e866c895938f34181cfd0419fbd311,
+      type: 3}
+  - Text: Trouve Pikachu
+    Answer: Pikachu
+    ImageTarget: {fileID: 4388558172747564434, guid: 0cf80e26cc5a0824da55be1488d1a608,
+      type: 3}
+  - Text: Trouve Yoda
+    Answer: Yoda
+    ImageTarget: {fileID: 4388558172747564434, guid: ffc5f5363b643ac4ab03867bd5d4d82b,
+      type: 3}
