@@ -117,6 +117,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void QuitterJeu()
+    {
+        // Ferme l'application
+        Application.Quit();
+
+        // Pour tester dans l'éditeur Unity (puisque Application.Quit() ne fonctionne pas dans l'éditeur)
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+
+    public void RetourMenu() => SceneManager.LoadScene("Menu");
+
     void ShowNextQuestion()
     {
         try
@@ -146,8 +159,11 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                // On passe les paramètres à la scène suivante
+                PlayerPrefs.SetInt("IsWin", 1);
+
                 // Il n'y a plus de question => Fin de la partie
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("Result");
             }
         }
         catch (Exception ex)
@@ -200,8 +216,11 @@ public class GameManager : MonoBehaviour
             // Si le joueur n'a plus de points de vie :
             if (currentPlayer.LifePoint <= 0)
             {
+                // On passe les paramètres à la scène suivante
+                PlayerPrefs.SetInt("IsWin", 0);
+
                 // Il n'y a plus de points de vie => Fin de la partie
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("Result");
             }
 
             // (On joue un son)
