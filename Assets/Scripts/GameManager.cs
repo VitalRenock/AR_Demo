@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.Video.VideoPlayer;
 
 public class GameManager : MonoBehaviour
 {
@@ -180,7 +181,12 @@ public class GameManager : MonoBehaviour
             {
                 // Pour chaque GO AR sur la scène, on enlève les listeners sur OnTargetFound() :
                 foreach (GameObject gameObjectAR in spawnedQuestions)
+                {
                     gameObjectAR.GetComponent<DefaultObserverEventHandler>().OnTargetFound.RemoveAllListeners();
+                    AudioSource audioSource = gameObjectAR.GetComponent<AudioSource>();
+                    if (audioSource != null)
+                        audioSource.enabled = true;
+                }
             }
 
             // On ajoute un point de score au joueur
@@ -206,6 +212,10 @@ public class GameManager : MonoBehaviour
         {
             // On enlève tout les listeners du GO AR qui a lancé l'event
             eventHandler.OnTargetFound.RemoveAllListeners();
+
+            AudioSource audioSource = eventHandler.gameObject.GetComponent<AudioSource>();
+            if (audioSource != null)
+                audioSource.enabled = false;
 
             // On enlève un point de vie au joueur
             currentPlayer.DecreaseLifePoint();
