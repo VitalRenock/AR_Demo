@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f97c899f8cb9fa4c95fce1dede944f1, type: 3}
+  m_Name: QuestionsSet2
+  m_EditorClassIdentifier: 
+  QuestionsList:
+  - Text: Trouve un oiseau
+    Answer: Oiseau
+    ImageTarget: {fileID: 5504890174253991917, guid: 71a2a6ea7274b6643b786db306b8c08c,
+      type: 3}
+  - Text: "Trouve un l\xE9zard"
+    Answer: "L\xE9zard"
+    ImageTarget: {fileID: 4912634642909014476, guid: 19180c8245594ab46bb4ca70e8752582,
+      type: 3}
+  - Text: Trouve un cheval
+    Answer: Cheval
+    ImageTarget: {fileID: 7904801729815011422, guid: 7d09bc8b66be999468165ae357445526,
+      type: 3}
+  - Text: Trouve un serpent
+    Answer: Serpent
+    ImageTarget: {fileID: 4038703136277073076, guid: c0609c577e042be4d8bc1c02e47c7e40,
+      type: 3}
+  - Text: Trouve un tigre
+    Answer: Tigre
+    ImageTarget: {fileID: 5215443743379301077, guid: b7206b0803c1da94584309ea7c9d88aa,
+      type: 3}
